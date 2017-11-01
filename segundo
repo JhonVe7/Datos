@@ -1,0 +1,39 @@
+/*
+ * @author Jhon Ve
+ * @ version nov 01  de 2017
+ */
+import java.util. *;
+public class segundo{
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite tamaño para el arreglo");
+        int tm = sc.nextInt();
+        int Array [] = new int [tm];
+        int Array2[] = new int [tm];
+        
+        for (int i = 0; i < Array.length; i++) {
+            
+            Array[i] = sc.nextInt();    
+        }
+        
+        for (int i = 0; i < Array.length ; i++) {
+            int Valor = 1;
+            for (int j = 0; j < Array.length; j++) {
+                
+               if(i!=j)
+               {
+                   Valor *= Array[j];
+                   Array2[i] = Valor;   
+               }  
+            } 
+        }
+        
+         for (int x = 0; x < Array2.length; x++) {
+                    
+                    System.out.println(Array2[x]);           
+                }
+    }
+    
+}
